@@ -11,7 +11,7 @@
     $nome = "Rafael";
     $idade = 20;
     $stmt = $conn->prepare("INSERT INTO Pessoas(nome, idade) VALUES(?, ?)");
-    $stmt->bind_param("si", $nome, $idade);
+    $stmt->bind_param("ss", $nome, $idade);
     $stmt->execute();
 
     // LISTAR DO BANCO DE DADOS
